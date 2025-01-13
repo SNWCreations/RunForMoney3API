@@ -3,6 +3,7 @@ package snw.rfm.api.game;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
 import snw.rfm.api.game.extra.ExtraObjectStorage;
+import snw.rfm.api.game.hook.GameHooks;
 import snw.rfm.api.game.listener.GameEventListener;
 import snw.rfm.api.game.logic.IGameLogicSet;
 import snw.rfm.api.game.logic.abandon.AbandonHandler;
@@ -66,6 +67,8 @@ public interface IGame extends Freezable, Tickable {
     IGameLogicSet getLogicSet();
 
     IGameStatManager getStatManager();
+
+    GameHooks getHooks();
 
     IMissionManager getMissionManager();
 }
