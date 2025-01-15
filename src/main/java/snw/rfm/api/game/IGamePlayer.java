@@ -19,4 +19,6 @@ public interface IGamePlayer {
     Optional<String> getName();
 
     Optional<String> getDisplayName();
+
+    boolean isOp();
 }
