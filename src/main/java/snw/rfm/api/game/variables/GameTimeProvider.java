@@ -1,13 +1,13 @@
 package snw.rfm.api.game.variables;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 public interface GameTimeProvider {
     // It means no time defined yet,
     // check if the result is this before using the result
     int UNDEFINED = -1;
 
-    AtomicInteger getGameTime();
+    int getCurrentGameTime();
+
+    void setCurrentGameTime(int time) throws IllegalArgumentException;
 
     boolean isTimerLaunched();
 
