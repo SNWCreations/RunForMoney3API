@@ -9,6 +9,10 @@ public interface GameTimeProvider {
 
     void setCurrentGameTime(int time) throws IllegalArgumentException;
 
+    boolean isTimerPaused();
+
+    void setTimerPaused(boolean newValue);
+
     boolean isTimerLaunched();
 
     void launchTimer(int time) throws IllegalArgumentException, IllegalStateException;
