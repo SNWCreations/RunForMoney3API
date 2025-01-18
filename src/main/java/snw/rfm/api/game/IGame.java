@@ -48,6 +48,8 @@ public interface IGame extends Freezable, Tickable {
 
     List<IGamePlayer> getOutPlayers();
 
+    List<IGamePlayer> getAbandonedPlayers();
+
     World getWorld();
 
     Set<IGamePlayer> getPlayersView();
