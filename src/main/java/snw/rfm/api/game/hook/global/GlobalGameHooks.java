@@ -9,6 +9,7 @@ public final class GlobalGameHooks {
     public static final Hook<TeamMemberChangedHook> PLAYER_LEFT_TEAM;
     public static final Hook<GroupMemberChangedHook> PLAYER_JOINED_GROUP;
     public static final Hook<GroupMemberChangedHook> PLAYER_LEFT_GROUP;
+    public static final Hook<OpStatusChangedHook> OP_STATUS_CHANGED;
     
     static {
         GAME_STARTING = Hook.create();
@@ -16,6 +17,7 @@ public final class GlobalGameHooks {
         PLAYER_LEFT_TEAM = Hook.create();
         PLAYER_JOINED_GROUP = Hook.create();
         PLAYER_LEFT_GROUP = Hook.create();
+        OP_STATUS_CHANGED = Hook.create();
     }
     
     private GlobalGameHooks() {
@@ -28,5 +30,6 @@ public final class GlobalGameHooks {
         PLAYER_LEFT_TEAM.dispose();
         PLAYER_JOINED_GROUP.dispose();
         PLAYER_LEFT_GROUP.dispose();
+        OP_STATUS_CHANGED.dispose();
     }
 }
