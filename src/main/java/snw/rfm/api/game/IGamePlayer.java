@@ -21,4 +21,6 @@ public interface IGamePlayer {
     Optional<String> getDisplayName();
 
     boolean isOp();
+
+    void setOp(boolean op);
 }
