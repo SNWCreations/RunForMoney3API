@@ -44,6 +44,8 @@ public interface IGame extends Freezable, Tickable {
 
     boolean respawn(IGamePlayer player, boolean broadcast);
 
+    GamePlayerAbilities getPlayerAbilities(IGamePlayer player);
+
     List<IGamePlayer> getAlivePlayers();
 
     List<IGamePlayer> getOutPlayers();
