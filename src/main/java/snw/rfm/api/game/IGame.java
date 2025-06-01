@@ -7,6 +7,7 @@ import snw.rfm.api.game.hook.GameHooks;
 import snw.rfm.api.game.listener.GameEventListener;
 import snw.rfm.api.game.logic.IGameLogicSet;
 import snw.rfm.api.game.logic.abandon.AbandonHandler;
+import snw.rfm.api.game.logic.out.OutReason;
 import snw.rfm.api.game.mission.IMissionManager;
 import snw.rfm.api.game.stat.IGameStatManager;
 import snw.rfm.api.game.variables.GameVariables;
@@ -41,6 +42,8 @@ public interface IGame extends Freezable, Tickable {
     void broadcast(String... what);
 
     boolean out(IGamePlayer player, boolean broadcast);
+
+    boolean out(IGamePlayer player, boolean broadcast, OutReason reason);
 
     boolean respawn(IGamePlayer player, boolean broadcast);
 

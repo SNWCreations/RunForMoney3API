@@ -1,7 +1,13 @@
 package snw.rfm.api.game.hook;
 
 import snw.rfm.api.game.IGamePlayer;
+import snw.rfm.api.game.logic.out.OutReason;
 
 public interface PlayerOutHook {
-    void onPlayerOut(IGamePlayer who);
+    @Deprecated
+    default void onPlayerOut(IGamePlayer who) {
+        onPlayerOut(who, OutReason.CAUGHT);
+    }
+
+    void onPlayerOut(IGamePlayer who, OutReason reason);
 }

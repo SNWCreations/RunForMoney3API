@@ -12,4 +12,6 @@ public interface IRFMPlugin extends Plugin {
     IGamePlayer getGamePlayer(Player player);
 
     IGamePlayer getGamePlayer(UUID uuid);
+
+    String getTranslationEntry(Player audience, String key);
 }
