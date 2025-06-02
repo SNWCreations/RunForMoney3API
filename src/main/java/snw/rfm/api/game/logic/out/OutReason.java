@@ -5,7 +5,7 @@ public enum OutReason {
     LOCATED,
     BULLETIN,
     SNITCH,
-    MISSION_FAILURE
+    ALARM
     ;
 
     public String translationKey() {
