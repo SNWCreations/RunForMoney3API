@@ -7,6 +7,8 @@ public interface PlayerOutHandler {
 
     boolean queueOut(IGamePlayer who);
 
+    boolean cancelPendingOut(IGamePlayer who);
+
     boolean isOutQueued(IGamePlayer who);
 
     boolean out(IGamePlayer who, boolean broadcast);
