@@ -17,6 +17,10 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven {
+        name = "JitPack"
+        url = "https://jitpack.io/"
+    }
 }
 
 def lombok = "org.projectlombok:lombok:1.18.32"
