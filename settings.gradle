@@ -1,2 +1,4 @@
 rootProject.name = 'RunForMoney3API'
 
+include 'common'
+include 'bukkit'
