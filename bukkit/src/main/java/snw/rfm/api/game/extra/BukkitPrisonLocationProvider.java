@@ -4,10 +4,10 @@ import org.bukkit.Location;
 import org.jetbrains.annotations.Nullable;
 import snw.rfm.api.game.IBukkitGamePlayer;
 
-public interface PrisonLocationProvider {
-    @Nullable Location getPrisonLocation();
+public interface BukkitPrisonLocationProvider extends PrisonLocationProvider {
+    @Nullable Location getPrisonLocationInternal();
 
-    void setPrisonLocation(@Nullable Location location);
+    void setPrisonLocationInternal(@Nullable Location location);
 
     void goPrisonInNextTick(IBukkitGamePlayer who);
 }
