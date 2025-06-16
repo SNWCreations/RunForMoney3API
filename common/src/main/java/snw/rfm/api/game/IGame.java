@@ -9,6 +9,7 @@ import snw.rfm.api.game.logic.abandon.AbandonHandler;
 import snw.rfm.api.game.logic.out.OutReason;
 import snw.rfm.api.game.mission.IMissionManager;
 import snw.rfm.api.game.stat.IGameStatManager;
+import snw.rfm.api.game.teaming.IGamePlayerGroupManager;
 import snw.rfm.api.game.variables.GameVariables;
 import snw.rfm.api.interfaces.Freezable;
 import snw.rfm.api.interfaces.Tickable;
@@ -49,6 +50,8 @@ public interface IGame extends Freezable, Tickable {
     Set<? extends IGamePlayer> getPlayersView();
 
     IGameTeamManager getTeamManager();
+
+    IGamePlayerGroupManager<?> getPlayerGroupManager();
 
     ITaskManager getTaskManager();
 
