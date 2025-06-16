@@ -3,6 +3,7 @@ package snw.rfm.api;
 import org.jetbrains.annotations.Nullable;
 import snw.rfm.api.abc.ObjectResolver;
 import snw.rfm.api.game.IGamePlayer;
+import snw.rfm.api.game.init.GameLauncher;
 
 import java.util.UUID;
 
@@ -15,4 +16,6 @@ public interface IRFMPlugin {
     String getTranslationEntry(UUID audience, String key);
 
     ObjectResolver getObjectResolver();
+
+    GameLauncher getGameLauncher();
 }
