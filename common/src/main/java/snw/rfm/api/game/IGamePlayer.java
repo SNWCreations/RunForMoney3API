@@ -16,6 +16,9 @@ public interface IGamePlayer {
 
     Optional<? extends GamePlayerGroup> getGroup();
 
+    // Empty optional is returned if the player is not in any game
+    Optional<? extends GamePlayerAbilities> getAbilities();
+
     Optional<String> getName();
 
     Optional<String> getDisplayName();
