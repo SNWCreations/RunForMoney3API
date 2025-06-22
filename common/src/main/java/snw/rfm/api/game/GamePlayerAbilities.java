@@ -18,6 +18,12 @@ public class GamePlayerAbilities {
     private boolean inGame;
 
     /**
+     * Determines if the player may be caught by others who can catch players. <br>
+     * This will be false only if the player was not a runner.
+     */
+    private boolean mayBeCaught;
+
+    /**
      * Determines if the player could be caught by others who can catch players.<br>
      * This will be {@code false} if:
      * <ul>
