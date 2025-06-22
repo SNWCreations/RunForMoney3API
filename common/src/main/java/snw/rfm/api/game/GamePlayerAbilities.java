@@ -5,7 +5,8 @@ import lombok.Data;
 /**
  * The class which describes the abilities that a player could have. <br>
  * The conditions given in docs of the member variable can be applied to common game,
- *  but not always true in some cases.
+ *  but not always true in some cases. <br>
+ * The values in this class are <b>NOT</b> reliable if the player is not online.
  */
 @Data
 public class GamePlayerAbilities {
