@@ -15,13 +15,51 @@ public interface GameInitialDataProvider {
 
     boolean isRecordingMode();
 
-    void setGameTime(Integer gameTime);
+    Immutable toImmutable();
 
-    void setHunterReleaseTime(Integer hunterReleaseTime);
+    interface Mutable extends GameInitialDataProvider {
+        void setGameTime(Integer gameTime);
 
-    void setNoStopWhenAllOut(boolean noStopWhenAllOut);
+        void setHunterReleaseTime(Integer hunterReleaseTime);
 
-    void setStartTimerAfterHunterRelease(boolean startTimerAfterHunterRelease);
+        void setNoStopWhenAllOut(boolean noStopWhenAllOut);
 
-    void setRecordingMode(boolean recordingMode);
+        void setStartTimerAfterHunterRelease(boolean startTimerAfterHunterRelease);
+
+        void setRecordingMode(boolean recordingMode);
+
+        void copyFrom(GameInitialDataProvider other);
+    }
+
+    record Immutable(OptionalInt gameTime, OptionalInt hunterReleaseTime, boolean noStopWhenAllOut, boolean startTimerAfterHunterRelease, boolean recordingMode) implements GameInitialDataProvider {
+        @Override
+        public @NonNull OptionalInt getGameTime() {
+            return gameTime();
+        }
+
+        @Override
+        public @NonNull OptionalInt getHunterReleaseTime() {
+            return hunterReleaseTime();
+        }
+
+        @Override
+        public boolean isNoStopWhenAllOut() {
+            return noStopWhenAllOut();
+        }
+
+        @Override
+        public boolean isStartTimerAfterHunterRelease() {
+            return startTimerAfterHunterRelease();
+        }
+
+        @Override
+        public boolean isRecordingMode() {
+            return recordingMode();
+        }
+
+        @Override
+        public Immutable toImmutable() {
+            return this;
+        }
+    }
 }
