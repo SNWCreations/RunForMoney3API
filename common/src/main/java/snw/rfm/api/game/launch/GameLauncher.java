@@ -1,7 +1,8 @@
-package snw.rfm.api.game.init;
+package snw.rfm.api.game.launch;
 
 import snw.rfm.api.abc.ILevel;
 import snw.rfm.api.game.IGame;
+import snw.rfm.api.game.init.GameInitialDataProvider;
 import snw.rfm.api.util.Either;
 
 import java.util.Collection;

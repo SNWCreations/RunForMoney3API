@@ -3,7 +3,6 @@ package snw.rfm.api.game.launch;
 import lombok.NonNull;
 import org.bukkit.World;
 import snw.rfm.api.game.IGame;
-import snw.rfm.api.game.init.GameLauncher;
 import snw.rfm.api.util.Either;
 
 import java.util.Collection;

@@ -3,7 +3,7 @@ package snw.rfm.api;
 import org.jetbrains.annotations.Nullable;
 import snw.rfm.api.abc.ObjectResolver;
 import snw.rfm.api.game.IGamePlayer;
-import snw.rfm.api.game.init.GameLauncher;
+import snw.rfm.api.game.launch.GameLauncher;
 
 import java.util.UUID;
 
