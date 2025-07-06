@@ -4,6 +4,7 @@ import org.jetbrains.annotations.ApiStatus;
 import snw.rfm.api.game.extra.ExtraObjectStorage;
 import snw.rfm.api.game.hook.GameHooks;
 import snw.rfm.api.game.listener.GameEventListener;
+import snw.rfm.api.game.logic.IGameOptions;
 import snw.rfm.api.game.logic.IGameLogicSet;
 import snw.rfm.api.game.logic.abandon.AbandonHandler;
 import snw.rfm.api.game.logic.out.OutReason;
@@ -73,4 +74,6 @@ public interface IGame extends Freezable, Tickable {
     IMissionManager getMissionManager();
 
     ITimerManager getTimerManager();
+
+    IGameOptions getOptions();
 }
