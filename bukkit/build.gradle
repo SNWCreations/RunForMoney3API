@@ -10,8 +10,8 @@ version = parent.version
 repositories {
     mavenCentral()
     maven {
-        name = "spigotmc-repo"
-        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+        name = 'papermc'
+        url = 'https://repo.papermc.io/repository/maven-public/'
     }
     maven {
         name = "sonatype"
@@ -26,7 +26,7 @@ repositories {
 def lombok = "org.projectlombok:lombok:1.18.32"
 dependencies {
     api parent.project("common")
-    compileOnly "org.spigotmc:spigot-api:${project.minecraft_version}-R0.1-SNAPSHOT"
+    compileOnly "io.papermc.paper:paper-api:${project.minecraft_version}-R0.1-SNAPSHOT"
     compileOnly 'org.jetbrains:annotations:24.1.0'
 
     compileOnly lombok
