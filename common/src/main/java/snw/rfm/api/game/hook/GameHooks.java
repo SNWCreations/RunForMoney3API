@@ -14,6 +14,8 @@ public final class GameHooks implements Disposable {
     public final Hook<BeforeDisposeHook> beforeDispose;
     public final Hook<TimePassedOneSecondHook> onGameTimePassedOneSecond;
     public final Hook<PlayerAbilitiesUpdatedHook> onPlayerAbilitiesUpdated;
+    public final Hook<TimerUpHook> onTimerUp;
+    public final Hook<TimerFreezeStateChangedHook> onTimerFreezeStateChanged;
 
     public GameHooks() {
         this.afterStart = Hook.create();
@@ -26,6 +28,8 @@ public final class GameHooks implements Disposable {
         this.beforeDispose = Hook.create();
         this.onGameTimePassedOneSecond = Hook.create();
         this.onPlayerAbilitiesUpdated = Hook.create();
+        this.onTimerUp = Hook.create();
+        this.onTimerFreezeStateChanged = Hook.create();
     }
 
     @Override
@@ -40,5 +44,7 @@ public final class GameHooks implements Disposable {
         beforeDispose.dispose();
         onGameTimePassedOneSecond.dispose();
         onPlayerAbilitiesUpdated.dispose();
+        onTimerUp.dispose();
+        onTimerFreezeStateChanged.dispose();
     }
 }

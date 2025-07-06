@@ -14,6 +14,7 @@ import snw.rfm.api.game.variables.GameVariables;
 import snw.rfm.api.interfaces.Freezable;
 import snw.rfm.api.interfaces.Tickable;
 import snw.rfm.api.task.ITaskManager;
+import snw.rfm.api.time.ITimerManager;
 
 import java.util.Collection;
 import java.util.List;
@@ -70,4 +71,6 @@ public interface IGame extends Freezable, Tickable {
     GameHooks getHooks();
 
     IMissionManager getMissionManager();
+
+    ITimerManager getTimerManager();
 }

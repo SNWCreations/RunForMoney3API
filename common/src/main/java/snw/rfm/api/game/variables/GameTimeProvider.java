@@ -1,5 +1,9 @@
 package snw.rfm.api.game.variables;
 
+/**
+ * @deprecated Use {@link snw.rfm.api.time.ITimerManager} instead
+ */
+@Deprecated
 public interface GameTimeProvider {
     // It means no time defined yet,
     // check if the result is this before using the result
