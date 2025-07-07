@@ -9,7 +9,7 @@ import snw.rfm.api.util.Either;
 import java.util.Collection;
 
 public interface GameLauncher {
-    GameInitialDataProvider getInitialDataProvider();
+    GameInitialDataProvider.Mutable getInitialDataProvider();
 
     IGameTeamManager getTeamManager();
 
